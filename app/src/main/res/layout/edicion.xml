@@ -1,0 +1,215 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.mariangeles.actividades.Editar">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:id="@+id/etDescripcion"
+        android:layout_centerHorizontal="true"
+        android:hint="descripcion"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spProfesor"
+        android:layout_below="@+id/etDescripcion"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spGrupo"
+        android:layout_below="@+id/spProfesor"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/AppTheme" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spGrupo"
+        android:id="@+id/tipo"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Extraescolar"
+                android:id="@+id/rbExtraescolar"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/rbComplementaria"
+                android:layout_toEndOf="@+id/rbComplementaria"
+                android:layout_gravity="center_horizontal"
+                android:checked="true"
+                android:onClick="extraescolar" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Complemetaria"
+                android:id="@+id/rbComplementaria"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_horizontal"
+                android:checked="false"
+                android:onClick="complementaria" />
+        </LinearLayout>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salida"
+        android:layout_below="@+id/tipo"
+        android:id="@+id/tvSalida"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/pick_time"
+        android:onClick="setHoraSalida"
+        android:id="@+id/button2"
+        android:src="@android:drawable/ic_menu_recent_history"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvSalida" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etHoraSalida"
+        android:text="@string/hora"
+        android:layout_toLeftOf="@+id/button2"
+        android:layout_alignTop="@+id/tvSalida"
+        android:layout_alignBottom="@+id/button2"
+        android:paddingLeft="50dp"
+        android:gravity="center_vertical"
+        android:layout_toEndOf="@+id/tvLlegada"
+        android:layout_toRightOf="@+id/tvLlegada" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="setFechaSalida"
+        android:id="@+id/button3"
+        android:src="@android:drawable/ic_menu_my_calendar"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etHoraSalida"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvFechaSalida"
+        android:text="@string/fecha"
+        android:layout_toLeftOf="@+id/button3"
+        android:layout_below="@+id/etHoraSalida"
+        android:layout_alignBottom="@+id/button3"
+        android:paddingLeft="50dp"
+        android:gravity="center_vertical"
+        android:layout_toEndOf="@+id/tvLlegada"
+        android:layout_toRightOf="@+id/tvLlegada" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etLugarSalida"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:hint="lugar"
+        android:layout_marginLeft="100dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/llegada"
+        android:layout_below="@+id/etLugarSalida"
+        android:id="@+id/tvLlegada"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/pick_time"
+        android:onClick="setHoraLlegada"
+        android:id="@+id/button2Llegada"
+        android:src="@android:drawable/ic_menu_recent_history"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvLlegada" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etHoraLlegada"
+        android:text="@string/hora"
+        android:layout_toLeftOf="@+id/button2Llegada"
+        android:layout_alignTop="@+id/tvLlegada"
+        android:layout_alignBottom="@+id/button2Llegada"
+        android:paddingLeft="50dp"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/tvLlegada"
+        android:layout_toEndOf="@+id/tvLlegada" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="setFechaLlegada"
+        android:id="@+id/button3Llegada"
+        android:src="@android:drawable/ic_menu_my_calendar"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etHoraLlegada"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvFechaLlegada"
+        android:text="@string/fecha"
+        android:layout_toLeftOf="@+id/button3"
+        android:layout_below="@+id/etHoraLlegada"
+        android:layout_alignBottom="@+id/button3Llegada"
+        android:paddingLeft="50dp"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/tvLlegada"
+        android:layout_toEndOf="@+id/tvLlegada" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etLugarLlegada"
+        android:layout_below="@+id/button3Llegada"
+        android:layout_centerHorizontal="true"
+        android:hint="lugar"
+        android:layout_marginLeft="100dp" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guardar"
+        android:id="@+id/button4"
+        android:onClick="guardar"
+        android:layout_below="@+id/etLugarLlegada"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/button4"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

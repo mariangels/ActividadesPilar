@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context="com.example.mariangeles.actividades.fragmentos.FragmentoDetalle"
+    android:gravity="center_vertical">
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imgView"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDescripcion"
+                android:layout_gravity="center_horizontal"
+                android:layout_above="@+id/tvProfesor"
+                android:layout_toRightOf="@+id/imgView"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvProfesor"
+                android:layout_below="@+id/imgView"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDepartamento"
+                android:layout_below="@+id/tvProfesor"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvGrupo"
+                android:layout_below="@+id/tvDepartamento"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSalir"
+                android:layout_below="@+id/tvGrupo"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvLlegar"
+                android:layout_below="@+id/tvSalir"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp" />
+
+
+
+</RelativeLayout>

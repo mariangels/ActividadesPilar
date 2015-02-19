@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/fragmentoLista"
+            android:layout_weight="2"
+            android:name="com.example.mariangeles.actividades.fragmentos.FragmentoLista"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout="@layout/fragmento_lista"
+            tools:layout="@layout/fragmento_lista" />
+
+        <fragment
+            android:id="@+id/fragmentoDetalle"
+            android:layout_weight="4"
+            android:name="com.example.mariangeles.actividades.fragmentos.FragmentoDetalle"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/fragmentoLista"
+            android:layout_toRightOf="@+id/fragmentoLista"
+            android:layout="@layout/fragmento_detalle"
+            tools:layout="@layout/fragmento_detalle" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

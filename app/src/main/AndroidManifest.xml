@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mariangeles.actividades" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icono"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Principal"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ActividadDetalle"
+            android:label="@string/title_activity_actividad_detalle"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ActividadLista"
+            android:label="@string/title_activity_actividad_lista" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Editar"
+            android:label="@string/title_activity_editar"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>
